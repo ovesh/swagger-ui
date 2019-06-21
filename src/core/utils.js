@@ -686,7 +686,7 @@ export const btoa = (str) => {
 }
 
 export const atob = (str) => {
-  return new Buffer(str, 'base64').toString()
+  return new Buffer(str, "base64").toString()
 }
 
 export const sorters = {
