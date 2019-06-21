@@ -22,13 +22,13 @@ export default function curl( request ){
   }
 
   let user = ""
-  for( let p of request.get("headers").entries() ){
-    let [ h,v ] = p
-    if (h == "authorization") {
-      user = getBasicAuthUser(v)
-    }
-  }
   if ( headers && headers.size ) {
+    for( let p of request.get("headers").entries() ){
+      let [ h,v ] = p
+      if (h == "authorization") {
+        user = getBasicAuthUser(v)
+      }
+    }
     for( let p of request.get("headers").entries() ){
       let [ h,v ] = p
       type = v
